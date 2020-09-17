@@ -480,7 +480,7 @@ namespace Fungus
 
                 if (!string.IsNullOrEmpty(item.Text)) { 
                     exitSayWait = false;
-                    sayDialog.Say(item.Text, item.ClearPrev, item.WaitForInput, item.FadeDone, true, false, null, () => {
+                    sayDialog.Say(item.Text, item.Character.NameColor, item.ClearPrev, item.WaitForInput, item.FadeDone, true, false, null, () => {
                         exitSayWait = true;
                     });
 

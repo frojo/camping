@@ -125,7 +125,8 @@ namespace Fungus
 
             string subbedText = flowchart.SubstituteVariables(displayText);
 
-            sayDialog.Say(subbedText, !extendPrevious, waitForClick, fadeWhenDone, stopVoiceover, waitForVO, voiceOverClip, delegate {
+            // HACK: i want my text to be colored, so i extended Say() to include a color
+            sayDialog.Say(subbedText, character.NameColor, !extendPrevious, waitForClick, fadeWhenDone, stopVoiceover, waitForVO, voiceOverClip, delegate {
                 Continue();
             });
         }

@@ -455,28 +455,30 @@ namespace Fungus
         /// Write a line of story text to the Say Dialog. Starts coroutine automatically.
         /// </summary>
         /// <param name="text">The text to display.</param>
+        /// <param name="color">Color of the text.</param>
         /// <param name="clearPrevious">Clear any previous text in the Say Dialog.</param>
         /// <param name="waitForInput">Wait for player input before continuing once text is written.</param>
         /// <param name="fadeWhenDone">Fade out the Say Dialog when writing and player input has finished.</param>
         /// <param name="stopVoiceover">Stop any existing voiceover audio before writing starts.</param>
         /// <param name="voiceOverClip">Voice over audio clip to play.</param>
         /// <param name="onComplete">Callback to execute when writing and player input have finished.</param>
-        public virtual void Say(string text, bool clearPrevious, bool waitForInput, bool fadeWhenDone, bool stopVoiceover, bool waitForVO, AudioClip voiceOverClip, Action onComplete)
+        public virtual void Say(string text, Color color, bool clearPrevious, bool waitForInput, bool fadeWhenDone, bool stopVoiceover, bool waitForVO, AudioClip voiceOverClip, Action onComplete)
         {
-            StartCoroutine(DoSay(text, clearPrevious, waitForInput, fadeWhenDone, stopVoiceover, waitForVO, voiceOverClip, onComplete));
+            StartCoroutine(DoSay(text, color, clearPrevious, waitForInput, fadeWhenDone, stopVoiceover, waitForVO, voiceOverClip, onComplete));
         }
 
         /// <summary>
         /// Write a line of story text to the Say Dialog. Must be started as a coroutine.
         /// </summary>
         /// <param name="text">The text to display.</param>
+        /// <param name="color">Color of the text.</param>
         /// <param name="clearPrevious">Clear any previous text in the Say Dialog.</param>
         /// <param name="waitForInput">Wait for player input before continuing once text is written.</param>
         /// <param name="fadeWhenDone">Fade out the Say Dialog when writing and player input has finished.</param>
         /// <param name="stopVoiceover">Stop any existing voiceover audio before writing starts.</param>
         /// <param name="voiceOverClip">Voice over audio clip to play.</param>
         /// <param name="onComplete">Callback to execute when writing and player input have finished.</param>
-        public virtual IEnumerator DoSay(string text, bool clearPrevious, bool waitForInput, bool fadeWhenDone, bool stopVoiceover, bool waitForVO, AudioClip voiceOverClip, Action onComplete)
+        public virtual IEnumerator DoSay(string text, Color color, bool clearPrevious, bool waitForInput, bool fadeWhenDone, bool stopVoiceover, bool waitForVO, AudioClip voiceOverClip, Action onComplete)
         {
             var writer = GetWriter();
 
@@ -518,6 +520,8 @@ namespace Fungus
             }
 
             writer.AttachedWriterAudio = writerAudio;
+            // todo: make sure this isn't a bug
+            writer.SetTextColor(color);
 
             yield return StartCoroutine(writer.Write(text, clearPrevious, waitForInput, stopVoiceover, waitForVO, soundEffectClip, onComplete));
         }
