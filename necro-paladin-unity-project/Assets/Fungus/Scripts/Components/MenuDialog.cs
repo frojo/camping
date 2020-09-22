@@ -18,6 +18,8 @@ namespace Fungus
         [Tooltip("Automatically select the first interactable button when the menu is shown.")]
         [SerializeField] protected bool autoSelectFirstButton = false;
 
+        protected VerticalLayoutGroup cachedButtonGroup;
+
         protected Button[] cachedButtons;
 
         protected Slider cachedSlider;
@@ -29,6 +31,12 @@ namespace Fungus
         /// Currently active Menu Dialog used to display Menu options
         /// </summary>
         public static MenuDialog ActiveMenuDialog { get; set; }
+
+        /// <summary>
+        /// A cached button group object that contains the UI buttons
+        /// </summary>
+        /// <value>The cached buttons.</value>
+        public virtual VerticalLayoutGroup CachedButtonGroup { get { return cachedButtonGroup; } }
 
         /// <summary>
         /// A cached list of button objects in the menu dialog.
@@ -85,6 +93,9 @@ namespace Fungus
 
         protected virtual void Awake()
         {
+  
+            // this line is unity's fault
+            cachedButtonGroup = GetComponentInChildren<VerticalLayoutGroup>();
             Button[] optionButtons = GetComponentsInChildren<Button>();
             cachedButtons = optionButtons;
 
@@ -179,6 +190,9 @@ namespace Fungus
             //if something was shown notify that we are ending
             if(nextOptionIndex != 0)
                 MenuSignals.DoMenuEnd(this);
+
+            var buttonGroup = CachedButtonGroup;
+            buttonGroup.gameObject.SetActive(false);
 
             nextOptionIndex = 0;
 
@@ -297,6 +311,9 @@ namespace Fungus
             //if first option notify that a menu has started
             if(nextOptionIndex == 0)
                 MenuSignals.DoMenuStart(this);
+
+            // todo: show/ set active ButtonGroup
+            cachedButtonGroup.gameObject.SetActive(true);
 
             var button = cachedButtons[nextOptionIndex];
             
