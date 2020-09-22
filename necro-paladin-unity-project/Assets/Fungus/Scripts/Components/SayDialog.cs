@@ -102,6 +102,9 @@ namespace Fungus
 				activeSayDialogs.Add(this);
 			}
 
+      // Debug.Log("storyText = " + storyText);
+      // Debug.Log("storyTextGO = " + storyTextGO.name);
+
             nameTextAdapter.InitFromGameObject(nameText != null ? nameText.gameObject : nameTextGO);
             storyTextAdapter.InitFromGameObject(storyText != null ? storyText.gameObject : storyTextGO);
         }
