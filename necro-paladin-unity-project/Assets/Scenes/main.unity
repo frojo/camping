@@ -624,9 +624,10 @@ GameObject:
   - component: {fileID: 261658667}
   - component: {fileID: 261658666}
   - component: {fileID: 261658669}
-  - component: {fileID: 261658668}
   - component: {fileID: 261658670}
   - component: {fileID: 261658671}
+  - component: {fileID: 261658672}
+  - component: {fileID: 261658668}
   m_Layer: 0
   m_Name: flowchart
   m_TagString: Untagged
@@ -671,7 +672,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -129.44112
     y: 228.5678
-    width: 66
+    width: 100
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -696,19 +697,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 1344.1368, y: 255.28398}
+  scrollPos: {x: 5.995163, y: -58.784866}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 387
-  zoom: 0.25
+  blockViewHeight: 628
+  zoom: 0.52
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 261658608}
+  selectedBlocks: []
   selectedCommands: []
   variables: []
   description: 
@@ -772,7 +772,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1178.9812
     y: 244.09875
-    width: 70
+    width: 103.84616
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -903,7 +903,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 269.60696
     y: 243.58527
-    width: 60
+    width: 84.61539
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -931,7 +931,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -246.08902
     y: 85.33188
-    width: 60
+    width: 75
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1492,36 +1492,7 @@ MonoBehaviour:
     stringRef: {fileID: 0}
     stringVal: 'earnest: What''s up?
 
-      lucien: i think there''s a... fish here
-
-      earnest:
-      A fish? In the river? That''s crazy.
-
-      lucien: i think it''s dead
-
-      earnest:
-      Maybe it got corona.
-
-      lucien: WOW
-
-      lucien: wowwwwwwwwwwwwwwwwwww
-
-      lucien:
-      people are dying
-
-      earnest: Whatever. They''re too dead to be offended
-
-      lucien:
-      wow dude
-
-      lucien: who are you
-
-
-      earnest: I think it''s moving a
-      little. I can''t tell if it''s just the water though.
-
-      lucien does it
-      matter'
+      lucien: i think there''s a... fish here'
   clearPrevious:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -1548,9 +1519,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 466.03027
+    x: 467.29608
     y: 191.86691
-    width: 60
+    width: 71.15385
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1562,6 +1533,7 @@ MonoBehaviour:
   - {fileID: 261658641}
   - {fileID: 261658609}
   - {fileID: 261658634}
+  - {fileID: 261658672}
   - {fileID: 261658664}
   - {fileID: 261658646}
   suppressAllAutoSelections: 0
@@ -1581,7 +1553,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 453.1056
     y: 342.76154
-    width: 78
+    width: 111.53847
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1649,7 +1621,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 124.18553
     y: 296.04657
-    width: 60
+    width: 88.46154
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1736,7 +1708,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 285.40213
     y: 184.59052
-    width: 60
+    width: 71.15385
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1876,9 +1848,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 648.2687
+    x: 652.2687
     y: 262.2541
-    width: 60
+    width: 78.84615
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1932,7 +1904,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 761.7252
     y: 396.36664
-    width: 90
+    width: 119.230774
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -1988,7 +1960,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 833.122
     y: 494.67654
-    width: 90
+    width: 121.15385
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2042,7 +2014,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 859.65283
     y: 617.94196
-    width: 90
+    width: 121.15385
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2323,7 +2295,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 792.9753
     y: 244.80414
-    width: 94
+    width: 126.92308
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2434,7 +2406,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1178.9812
     y: 304.09875
-    width: 78
+    width: 113.46154
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -2476,7 +2448,7 @@ MonoBehaviour:
     booleanVal: 1
 --- !u!114 &261658668
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -2556,6 +2528,39 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &261658672
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261658602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f608b8c9fb3044200aac956492d8d586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 89
+  indentLevel: 0
+  conversationText:
+    stringRef: {fileID: 0}
+    stringVal: "earnest: A fish? In the river? Wow.\nlucien: i think it's dead\nearnest:
+      Maybe it got corona.\nlucien: WOW\nlucien: wowwwwwwwwwwwwwwwwwww\nlucien: people
+      are dying\nearnest: Whatever.\nearnest: They're too dead to be offended\nlucien:
+      wow dude\nlucien: who are you\nearnest: I think it's moving a little. \nearnest:
+      I can't tell if it's just the water though.\nlucien: does it matter"
+  clearPrevious:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForInput:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  waitForSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  fadeWhenDone:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
 --- !u!1 &266481707
 GameObject:
   m_ObjectHideFlags: 0
